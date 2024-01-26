@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 {% extends 'base.html' %}
 
 {% block styles %}
@@ -77,16 +79,16 @@
       
       <ul class="list-unstyled messages-list">
         
-        <!-- <li class="message received">
+        <li class="message received">
           <div class="message-text">
             <div class="message-sender">
-              <b>AI Chatbot</b>
+              <b>ChatRJP</b>
             </div>
             <div class="message-content">
-              Hi {{user.username}}, I am your AI Chatbot, you can ask me anything.
+              Hi {{user.username}}, how can I assist you today?
             </div>
           </div>
-        </li> -->
+        </li>
 
         {% for chat in chats %}
           {% if chat.user == request.user %}
@@ -191,3 +193,4 @@
 
 </script>
 {% endblock %}
+</html>
