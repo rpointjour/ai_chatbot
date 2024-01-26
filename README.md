@@ -8,3 +8,8 @@
 - **Virtual Environment** = `(chatbot)`
 - **Django Project** = `/djangochat`
 - **Django App** = `/django_chatbot`
+#
+# Templates
+
+- `base.html`
+- `chatbot.html`
