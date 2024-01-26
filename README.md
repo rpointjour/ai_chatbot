@@ -4,6 +4,10 @@
 
 #
 # ChatRJP 1.0
+
+<img src="https://github.com/rpointjour/ai_chatbot/assets/54840122/9370337c-127a-4231-8381-72bbced0bf25" alt="ChatRJP" />
+
+
 # Project Setup
 
 - **Virtual Environment** = `(chatbot)`
