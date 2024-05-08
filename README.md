@@ -14,3 +14,5 @@
 
 - `base.html`
 - `chatbot.html`
+  
+  <img src="https://github.com/rpointjour/ai_chatbot/assets/54840122/e60fb6b5-f93c-45f3-b053-e87a82c46f46" alt="Chatbot" style="width:40%;height:40%;" />
