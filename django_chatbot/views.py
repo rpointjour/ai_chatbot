@@ -1,17 +1,18 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 import openai
+import os
 
 
-openai_api_key = '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'
-openai.api_key = openai_api_key
+my_api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = my_api_key
 
-def ask_openai(message):
+def ask_openai(user_message):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": "Hello!"}
+            {"role": "user", "content": user_message}
         ]
     )
     
