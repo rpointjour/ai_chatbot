@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,6 +9,7 @@
     {% block styles %}{% endblock %}
   </head>
   <body>
+    <img src="{% static 'wheel_spinning.gif' %}" alt="Spinning Wheel" class="img-fluid d-block mx-auto" style="width:95px;height:95px;">
     {% block content %}{% endblock %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

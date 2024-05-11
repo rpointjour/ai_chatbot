@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 {% extends 'base.html' %}
-
 {% block styles %}
 <style>
     body, html {
       height: 100%;
+      background-color: rgb(34, 31, 31);
     }
 
     .messages-box {
@@ -44,7 +44,7 @@
       left: 0;
       right: 0;
       padding: 10px;
-      background-color: #f8f9fa;
+      background-color: #f8faf9;
     }
 
     .message-input {
@@ -65,15 +65,14 @@
   </style>
 {% endblock %}
 
-
 {% block content %}
 <div class="chat-container">
   <div class="card flex-grow-1">
-    <div class="card-header bg-primary text-white">Chat</div>
+    <div class="card-header bg-dark text-white">ChatRJP 1.0</div>
     {% if user.is_authenticated %}
     <div class="card-header bg-primary text-white"><b>Welcome, {{user.username}}</b>   <a style="color: yellow;" href="logout">Logout</a></div>
     {% else %}
-    <div class="card-header bg-primary text-white"><a style="color: yellow" href="login">Login</a>   <a style="color: yellow;" href="register">Register</a></div>
+    <div class="card-header bg-light text-white text-center"><a class="btn btn-success" href="login">Login</a>   <a class="btn btn-dark" href="register">Register</a></div>
     {% endif %}
     <div class="card-body messages-box">
       
@@ -107,7 +106,7 @@
         <li class="message received">
           <div class="message-text">
             <div class="message-sender">
-              <b>AI Chatbot</b>
+              <b>ChatRJP</b>
             </div>
             <div class="message-content">
               {{chat.response}}
@@ -130,7 +129,7 @@
     <div class="input-group">
       <input type="text" class="form-control message-input" placeholder="Type your message...">
       <div class="input-group-append">
-        <button type="submit" class="btn btn-primary btn-send">Send</button>
+        <button type="submit" class="btn btn-success btn-send">Send</button>
       </div>
     </div>
   </form>
@@ -180,7 +179,7 @@
         messageItem.innerHTML = `
         <div class="message-text">
             <div class="message-sender">
-              <b>AI Chatbot</b>
+              <b>ChatRJP</b>
             </div>
             <div class="message-content">
                 ${response}
