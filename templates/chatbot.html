@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 {% extends 'base.html' %}
+{% load static %}
 {% block styles %}
 <style>
     body, html {
@@ -69,6 +70,7 @@
 <div class="chat-container">
   <div class="card flex-grow-1">
     <div class="card-header bg-dark text-white">ChatRJP 1.0</div>
+    <img src="{% static 'spinning_wheel.svg' %}" alt="My SVG Image" style="width:100px;height:100px" class=" image-fluid-block mx-auto rounded">
     {% if user.is_authenticated %}
     <div class="card-header bg-primary text-white"><b>Welcome, {{user.username}}</b>   <a style="color: yellow;" href="logout">Logout</a></div>
     {% else %}
