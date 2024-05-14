@@ -74,7 +74,7 @@
     {% if user.is_authenticated %}
     <div class="card-header bg-primary text-white"><b>Welcome, {{user.username}}</b>   <a style="color: yellow;" href="logout">Logout</a></div>
     {% else %}
-    <div class="card-header bg-light text-white text-center"><a class="btn btn-success" href="login">Login</a>   <a class="btn btn-dark" href="register">Register</a></div>
+    <div class="card-header bg-light text-white text-center"><a class="btn btn-danger" href="login">Logout</a>   <a class="btn btn-dark" href="register">Register</a></div>
     {% endif %}
     <div class="card-body messages-box">
       
