@@ -69,13 +69,9 @@
 {% block content %}
 <div class="chat-container">
   <div class="card flex-grow-1">
-    <div class="card-header bg-dark text-white">ChatRJP 1.0</div>
-    <img src="{% static 'spinning_wheel.svg' %}" alt="My SVG Image" style="width:100px;height:100px" class=" image-fluid-block mx-auto rounded">
+    <div class="card-header bg-dark text-white" style="position: -webkit-sticky;position: sticky;top: 0;z-index: 1">ChatRJP 1.0</div>
     {% if user.is_authenticated %}
-    <div class="card-header bg-primary text-white"><b>Welcome, {{user.username}}</b>   <a style="color: yellow;" href="logout">Logout</a></div>
-    {% else %}
-    <div class="card-header bg-light text-white text-center"><a class="btn btn-danger" href="login">Logout</a>   <a class="btn btn-dark" href="register">Register</a></div>
-    {% endif %}
+    <div class="card-header bg-light text-dark"><b>Welcome, {{user.username}}</b> <img src="{% static 'spinning_wheel.svg' %}" alt="My SVG Image" style="width:100px;height:100px;" class=" image-fluid d-block mx-auto rounded"><br><a class="d-block mx-auto btn btn-danger" style="width: fit-content;" href="logout">Logout</a></div>
     <div class="card-body messages-box">
       
       <ul class="list-unstyled messages-list">
@@ -136,6 +132,9 @@
     </div>
   </form>
 </div>
+    {% else %}
+    <div class="card-header bg-light text-white text-center"> <a class="btn btn-success" href="login">Login</a>   <a class="btn btn-dark" href="register">Register</a></div>
+    {% endif %}
 
 <script>
   const messagesList = document.querySelector('.messages-list');
