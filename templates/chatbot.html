@@ -133,7 +133,10 @@
   </form>
 </div>
     {% else %}
-    <div class="card-header bg-light text-white text-center"> <a class="btn btn-success" href="login">Login</a>   <a class="btn btn-dark" href="register">Register</a></div>
+    <div class="card-header text-white text-center" style="background-color:#2a3439"> <a class="btn btn-dark" href="login">Login</a>   <a class="btn btn-danger" href="register">Register</a></div>
+    <div style="background-color:#2a3439" class="container-fluid" ><br><br><p class="display-4 text-center text-light">Welcome to ChatRJP!</p></div>
+      <img src="{% static 'spinning_wheel.svg' %}" alt="My SVG Image" style="width:100px;height:100px;" class=" image-fluid d-block mx-auto rounded">
+      <br><br><p class="h6 text-center"><mark class="bg-warning">Register/Login so I can assist you..</mark></p>
     {% endif %}
 
 <script>
