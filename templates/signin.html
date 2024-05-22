@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'chat_frame.html' %}
 
 {% block title %}Login{% endblock %}
 
@@ -65,6 +65,9 @@
     border: 1px solid #f5c6cb;
     border-radius: 4px;
   }
+  .btn-hover:hover{
+    background-color:#8b0000;
+  }
 </style>
 {% endblock %}
 
@@ -86,7 +89,8 @@
           <label for="password">Password</label>
           <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">Login</button><br><br>
+        <a class=" form-group btn btn-danger btn-hover d-block" href="/">Home</a>
       </form>
     </div>
   </div>

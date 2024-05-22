@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.django_chatbot, name='django_chatbot'),     # specify home page ('') for the app
-    path('login', views.login, name='login'),
+    path('signin', views.signin, name='signin'),
     path('register', views.register, name='register'),
-    path('logout', views.logout, name='logout'),
+    path('signout', views.signout, name='signout'),
 ]
