@@ -140,10 +140,11 @@
     {% endif %}
 
 <script>
+  // Access classes: messages-list, message-form, and message-input using query selector
   const messagesList = document.querySelector('.messages-list');
   const messageForm = document.querySelector('.message-form');
   const messageInput = document.querySelector('.message-input');
-
+ // Create an event listener for the submit button click that prevents the default action
   messageForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -151,7 +152,7 @@
     if (message.length === 0) {
       return;
     }
-
+// Dynamically create a new message item with sender and message content
     const messageItem = document.createElement('li');
     messageItem.classList.add('message', 'sent');
     messageItem.innerHTML = `
@@ -164,9 +165,9 @@
             </div>
         </div>`;
     messagesList.appendChild(messageItem);
-
+// Append to messages list in DOM
     messageInput.value = '';
-
+// Use the fetch API call to post the request to the server with a CSRF token and message
     fetch('', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -175,9 +176,9 @@
         'message': message
       })
     })
-      .then(response => response.json())
+      .then(response => response.json())    // Convert response to json
       .then(data => {
-        const response = data.response;
+        const response = data.response;   // Extract response from json
         const messageItem = document.createElement('li');
         messageItem.classList.add('message', 'received');
         messageItem.innerHTML = `
@@ -190,10 +191,10 @@
             </div>
         </div>
           `;
-        messagesList.appendChild(messageItem);
+        messagesList.appendChild(messageItem);   // Append to message list
       });
   });
-
+// Function to clear chat and reload the page
   function refreshChat()
   {
     location.reload();
