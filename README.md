@@ -3,6 +3,24 @@
 <img src="https://github.com/rpointjour/ai_chatbot/assets/54840122/6828c10e-6a14-41e2-933d-4183416745df" alt="Chatbot" style="width:70%;height:70%;" />
 
 #
+**Description:** 
+
+- **ChatRJP** (<i>"A  Chatbot Clone of ChatGPT"</i>) is a virtual chat application.
+- <i>My version of ChatGPT</i> using the Python backend framework Django and utilizing OpenAI's API: <i>Chat Completion, GPT3.5-Turbo Language Model</i>
+#
+<i>Inspiration:</i> <i>https://github.com/tomitokko/django-chat-app</i> 
+
+<i>References:</i>
+
+- https://platform.openai.com/docs/guides/text-generation
+- https://platform.openai.com/docs/api-reference/introduction
+
+#
+# Deployment (PythonAnyWhere)
+
+- **ChatRJP url:** https://rjpking92.pythonanywhere.com
+
+#
 # ChatRJP 1.0
 
 <img src="https://github.com/rpointjour/ai_chatbot/assets/54840122/b3bab735-d8fe-40b2-8e21-c7ddcd6dd0d3" alt="Chatbot" style="width:70%;height:70%;" />
