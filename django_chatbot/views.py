@@ -3,6 +3,8 @@ from django.http import JsonResponse
 import openai
 import os
 import time
+from django.http import HttpResponse 
+from django.template import loader
 
 from django.contrib import auth
 from django.contrib.auth.models import User
@@ -109,3 +111,10 @@ def register(request):
 def signout(request):
     auth.logout(request)
     return redirect('signin')
+
+def users(request):
+  user_data = User.objects.all()
+  context = {
+      'user_data' : user_data
+  }
+  return render(request, 'users.html', context)
